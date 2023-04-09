@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1676952608 source:d:\buoi 1\lanhuongday\game.cpp
+	"game.h"
+
+1676952593 d:\buoi 1\lanhuongday\game.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<time.h>
+	<string.h>
+	<conio.h>
+	<vector>
+	<math.h>
+
+1677051924 source:d:\buoi 1\lanhuongday\main.cpp
+	"game.h"
+
+1676952608 source:d:\buoi 1\game\game.cpp
+	"game.h"
+
+1676952593 d:\buoi 1\game\game.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<time.h>
+	<string.h>
+	<conio.h>
+	<vector>
+	<math.h>
+
+1681051719 source:d:\buoi 1\game\main.cpp
+	"game.h"
+

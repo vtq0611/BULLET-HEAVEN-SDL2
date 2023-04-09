@@ -1,0 +1,69 @@
+
+kiểu dữ liệu
+SDL_Window*: ra màn hình game
+SDL_Renderer*: con trỏ để xử lý các dữ liệu trên màn hình chơi
+SDL_Event: xử lý sự kiện bàn phím, chuột
+SDL_Texture*: con trỏ để lưu trữ ảnh (load ảnh)
+SDL_Rect: lưu trữ tọa độ điểm góc trái trên và chiều dài, rộng của hình chữ nhật
+
+hàm
+void initSDL (SDL_Window* &window, SDL_Renderer* &renderer);
+- hàm khởi tạo game
+
+void quitSDL (SDL_Window *window, SDL_Renderer* &renderer);
+- ham tat man hinh game
+
+SDL_Texture* loadTexture (string path, SDL_Renderer* renderer);
+- ham load anh voi dau vao la duong dan anh va man hinh choi
+
+SDL_QueryTexture (SDL_Texture* doi_tuong, NULL, NULL, int* h, int* w);
+- Ham lay kich thuoc anh luu vao h va w
+
+SDL_RenderCopy (SDL_Renderer* renderer, SDL_Texture* doi_tuong, NULL, SDL_Rect* khung);
+- ham tao doi tuong tren man hinh dat o vi tri khung
+
+SDL_RenderPresent (SDL_Renderer* renderer);
+- ham cap nhat lai man hinh ra man hinh game
+
+SDL_PollEvent (&g_event)
+- kiem tra su kien game va tra ve true neu co va nguoc lai tra ve false
+
+g_event.type: loai su kien
+g_event.key.keysym.sym: sk ban phim
+SDL_MOUSEBUTTONDOWN: sk chuot
+
+/**
+    /// load va resize player
+    SDL_Texture* player =  loadTexture ("./anh//playerwalk1.png", renderer);
+    int h, w;
+    SDL_QueryTexture (player, NULL, NULL, &h, &w);
+    h /= 5;
+    w /= 2;
+    SDL_Rect toa_do_nv;
+    toa_do_nv.x = 200;
+    toa_do_nv.y = 300;
+    toa_do_nv.h = h;
+    toa_do_nv.w = w;
+    SDL_RenderCopy (renderer, player, NULL, &toa_do_nv);
+    /**
+    mot doi tuong gom
+    SDL_Texture*: doiTuong
+    SDL_Rect: toa do
+    => tao mot class
+    */
+
+doi tuong
+- anh
+- khung
+- man hinh
+
+nhan vat
+- anh
+- khung
+- mh
+- speed
+- hp
+- mp
+- animation
+- damage
+=> class nhan vat
